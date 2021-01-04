@@ -10,6 +10,9 @@ include(${CMAKE_FOLDER}/cmake/threading.cmake)
 FIND_PACKAGE(emp-ot REQUIRED)
 INCLUDE_DIRECTORIES(${EMP-OT_INCLUDE_DIRS})
 
+install(DIRECTORY emp-agmpc DESTINATION include)
+install(DIRECTORY cmake/ DESTINATION cmake)
+
 # Test cases
 macro (add_test _name)
 	add_test_with_lib(${_name} ${EMP-OT_LIBRARIES})
